@@ -1,1 +1,19 @@
-<p>shop works!</p>
+<!-- <p>shop works!</p> -->
+<div class="row">
+    <div class="col-12">
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+          {{data}}
+        </button>
+        <ul class="dropdown-menu">
+          <li *ngFor="let data of data">
+
+            <a class="dropdown-item" href="#">{{data}}</a> 
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <hr/>
+  <!-- (click)="onChangeSubject($event, subject)" -->
+  
