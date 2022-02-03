@@ -13,5 +13,8 @@ export class TodosService {
 
   public getAll():Observable<Todo[]>{
     return this.httpClient.get<Todo[]>(`${environment.jsonPlaceholderAPI}/todos`);
+  } 
+  public Delete(id: number){
+    this.httpClient.delete(`${environment.jsonPlaceholderAPI}/todos/${id}`);
   }
 }

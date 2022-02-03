@@ -1,5 +1,5 @@
 <div class="card">
-    <table class="table table-sm table-hover" *ngIf="todos.length > 0">
+    <table id="dtBasicExample" class="table table-sm table-hover" *ngIf="todos.length > 0">
         <thead class="table-primary">
             <tr>
                 <th scope="col">#</th>
@@ -7,6 +7,7 @@
                 <th scope="col">UserId</th>
                 <th scope="col">Title</th>
                 <th scope="col">Completed</th>
+                <th scope="col">Delete</th>
             </tr>
         </thead>
         <tbody>
@@ -16,8 +17,9 @@
                 <td>{{todo.userId}}</td>
                 <td>{{todo.title}}</td>
                 <td>{{todo.completed}}</td>
+                <td> <button (click)="deleteTodo(todo.id)" class="btn btn-outline-danger btn-sm">Delete</button></td>
             </tr>
         </tbody>
-    </table>
+    </table>    
 </div>
 <h2 *ngIf="todos.length===0">There are no todos</h2>
