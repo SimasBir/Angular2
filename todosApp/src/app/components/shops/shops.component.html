@@ -1,12 +1,12 @@
-<div class="card">
+<div class="card" class="d-flex justify-content-center align-items-center">
     <table id="dtBasicExample" class="table table-sm table-hover" *ngIf="shops.length > 0">
-        <thead class="table-primary">
+        <thead class="table-light">
             <tr>
                 <th scope="col">#</th>
                 <th scope="col">Id</th>
                 <th scope="col">Name</th>
                 <th scope="col">Created date</th>
-                <th scope="col">Delete</th>
+                <th scope="col">Admin</th>
             </tr>
         </thead>
         <tbody>
@@ -15,13 +15,14 @@
                 <td>{{shop.id}}</td>
                 <td>{{shop.name}}</td>
                 <td>{{shop.createdDate}}</td>
-                <td> <button (click)="deleteShop(shop.id)" class="btn btn-outline-danger btn-sm">Delete</button></td>
+                <td> <button routerLink="/update-shop/{{shop.id}}" class="btn btn-outline-info btn-sm mx-1">Update</button>
+                <button (click)="deleteShop(shop.id)" class="btn btn-outline-danger btn-sm mx-1">Delete</button></td>
             </tr>
         </tbody>
     </table>
 </div>
 <h2 *ngIf="shops.length===0">
-    <div class="d-flex justify-content-center">
+    <div class="d-flex justify-content-center mt-2">
         <div class="spinner-border" role="status">
         </div>
         <span class="sr-only">Turn on the .NET server</span>

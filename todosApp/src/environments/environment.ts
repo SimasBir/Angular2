@@ -5,7 +5,8 @@
 export const environment = {
   production: false,
   jsonPlaceholderAPI:'https://jsonplaceholder.typicode.com',
-  myAPI:'https://localhost:44328'
+  myAPI:'https://localhost:44328',
+  pokemonAPI: 'https://pokeapi.co/api/v2/pokemon'
 };
 
 /*

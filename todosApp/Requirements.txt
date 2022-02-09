@@ -7,3 +7,20 @@ Optional:
 1. Add Bootstrap to your table. (Table should look nice)
 2. Add Delete button next to each todo (which makes Delete Call).
 3. Try connecting angular with .NET api (read what is CORS and why we getting it).
+
+
+additional:
+get 20 pokemons and display them as cards with all object datapokemon has:
+id
+name
+weigh
+photo (first photo you are able to find)
+type object (first type from types array (you should display type name in card)
+
+extra: find out how many pokemons are in API
+show 20 random pokemons.
+every time show pikachu as first pokemon
+
+shopItems noriu, kad atvaizduotum kaip korteles. tada noriu kad papildytum backende shopItem columnsu vienu, url. 
+tada susirask url i kuri besikreipiant grazinti random nuotrauka. yra toks grynai testavimui. atvaizduok items kaip cards, su nuotraukomis
+https://picsum.photos

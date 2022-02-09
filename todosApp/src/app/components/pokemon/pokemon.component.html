@@ -1,0 +1,21 @@
+<div class="container d-flex flex-wrap align-items-center">
+<div *ngFor="let pokemon of pokemons">
+    <div class="m-2 card">
+        <img [src]=pokemon.sprites.front_default class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{pokemon.id}} {{pokemon.name}}</h5>
+            
+            <p class="card-text">Weighs: {{pokemon.weight}} <br>
+                <span *ngIf="pokemon.types[0]">Type: {{pokemon.types[0].type.name}}</span>
+            </p>
+        </div>
+    </div>
+</div>
+<h2 *ngIf="pokemons.length===0">
+    <div class="d-flex justify-content-center">
+        <div class="spinner-border" role="status">
+        </div>
+        <span class="sr-only">No pokemons here</span>
+    </div>
+
+</h2>

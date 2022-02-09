@@ -9,11 +9,12 @@ import { ShopsService } from 'src/app/services/shops.service';
 })
 export class ShopsComponent implements OnInit {
   public shops: Shop[] = [];
-  
+  public shop?: Shop
+
   constructor(private shopService: ShopsService) { }
 
   ngOnInit(): void {
-    
+
     this.shopService.getAllShops().subscribe((shops: Shop[]) => {
       this.shops = shops;
     })
@@ -22,5 +23,4 @@ export class ShopsComponent implements OnInit {
     this.shops.forEach((value, index) => { if (value.id == id) this.shops.splice(index, 1); });
     this.shopService.Delete(id);
   }
-
 }

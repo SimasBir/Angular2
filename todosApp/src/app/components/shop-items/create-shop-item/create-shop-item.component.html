@@ -1,0 +1,18 @@
+<form (keyup.enter)="submitNewShopItem()">
+    <div class="d-flex justify-content-center align-items-center">
+        <div class="my-3">
+            <label>Shop item name</label>
+            <input [(ngModel)]="name" name="title" type="text" class="form-control" required>
+            <label>Price</label>
+            <input [(ngModel)]="price" name="price" type="text" class="form-control" required>
+            <label>Shop</label>
+            <select [(ngModel)]="shopId" name="shop" class="form-select" 
+            aria-label="Assign to shop" required>
+                <option value={{shop.id}} *ngFor="let shop of shops; index as i;">{{shop.name}}</option>
+              </select>            
+        </div>
+    </div>
+    <div class="d-flex justify-content-center align-items-center">
+        <button type="button" (click)="submitNewShopItem()" class="btn btn-primary">Submit</button>
+    </div>
+</form>
